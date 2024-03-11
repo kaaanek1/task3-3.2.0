@@ -1,6 +1,10 @@
 using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace task3-3
+namespace task3_3
 {
     sealed class OneDim: Parent, IOneDim
     {
@@ -62,14 +66,14 @@ namespace task3-3
             }
         }
 
-        public override void Average()
+        public override double Average()
         {
             int s = 0;
             foreach (int el in array)
             {
                 s += el;
             }
-            Console.WriteLine(s / array.Length);
+            return s / array.Length;
         }
 
 

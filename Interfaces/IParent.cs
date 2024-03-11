@@ -1,9 +1,9 @@
 using System;
 
-namespace task3-3
+namespace task3_3
 {
     interface IParent : IPrinter
     {
-        double Avarage();
+        double Average();
     }
 }

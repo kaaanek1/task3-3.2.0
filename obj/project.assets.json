@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ptest\\Documents\\task3-3\\task3-3.csproj",
+      "projectUniqueName": "C:\\Users\\Ptest\\Documents\\task3_3\\task3-3.csproj",
       "projectName": "task3-3",
-      "projectPath": "C:\\Users\\Ptest\\Documents\\task3-3\\task3-3.csproj",
+      "projectPath": "C:\\Users\\Ptest\\Documents\\task3_3\\task3-3.csproj",
       "packagesPath": "C:\\Users\\Ptest\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ptest\\Documents\\task3-3\\obj\\",
+      "outputPath": "C:\\Users\\Ptest\\Documents\\task3_3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

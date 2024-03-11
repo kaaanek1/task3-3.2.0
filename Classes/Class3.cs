@@ -1,6 +1,10 @@
 using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace task3-3
+namespace task3_3
 {
     sealed class JagDim: Parent, IJagDim
     {
@@ -76,6 +80,7 @@ namespace task3-3
 
         public override void Print()
         {
+            Console.WriteLine("Ступенчатый массив:");
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = 0; j < array[i].Length; j++)
@@ -110,7 +115,7 @@ namespace task3-3
             }
         }
 
-        public override void Average()
+        public override double Average()
         {
             int sum = 0;
             int el = 0;
@@ -123,7 +128,7 @@ namespace task3-3
                     el++;
                 }
             }
-            Console.WriteLine($"Среднее арифметическое целого массива: {sum / el}");
+            return sum / el;
         }
     }
 }

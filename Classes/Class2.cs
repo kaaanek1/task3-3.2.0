@@ -1,6 +1,10 @@
 using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace task3-3
+namespace task3_3
 {
     sealed class TwoDim: Parent, ITwoDim
     {
@@ -79,6 +83,7 @@ namespace task3-3
 
         public override void Print()
         {
+            Console.WriteLine("Двумерный массив:");
             for (int i = 0; i < array.GetLength(0); i++)
             {
                 for (int j = 0; j < array.GetLength(1); j++)
@@ -89,7 +94,7 @@ namespace task3-3
             }
         }
 
-        public override void Average()
+        public override double Average()
         {
             int sum = 0;
             for (int i = 0; i < array.GetLength(0); i++)
@@ -99,7 +104,7 @@ namespace task3-3
                     sum += array[i, j];
                 }
             }
-            Console.WriteLine($"Среднее арифметическое: {sum / (array.GetLength(0) * array.GetLength(1))}");
+            return sum / (array.GetLength(0) * array.GetLength(1));
         }
     }
 }

@@ -1,6 +1,6 @@
 using System;
 
-namespace task3-3
+namespace task3_3
 {
     abstract class Parent: IParent, IPrinter
     {
@@ -8,9 +8,9 @@ namespace task3-3
 
         protected bool entry = false;
 
-        private abstract void RndFill();
+        protected abstract void RndFill();
 
-        private abstract void UserFill();
+        protected abstract void UserFill();
 
         public abstract void Print();
 

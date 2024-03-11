@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace task3-3
+namespace task3_3
 {
     class Program
     {
@@ -14,7 +18,7 @@ namespace task3-3
     
             Console.Write("Введите длину одномерного массива: ");
             int l1 = int.Parse(Console.ReadLine());
-            OneDim arr1 = new(l1, fill);
+            IOneDim arr1 = new OneDim(l1, fill);
             array[0] = arr1;
             Console.WriteLine();
     
@@ -22,22 +26,43 @@ namespace task3-3
             int a = int.Parse(Console.ReadLine());
             Console.Write("Введите b для двумерного массива:");
             int b = int.Parse(Console.ReadLine());
-            TwoDim arr2 = new(b, a, fill);
+            ITwoDim arr2 = new TwoDim(b, a, fill);
             array[1] = arr2;
             Console.WriteLine();
     
             Console.WriteLine("Введите длину ступенчатого массива:");
             int l2 = int.Parse(Console.ReadLine());
-            JagDim arr3 = new(l2, fill);
+            IJagDim arr3 = new JagDim(l2, fill);
             array[2] = arr3;
+            Console.WriteLine();
     
             
             for (int i = 0; i < 3; i++)
             {
                 array[i].Print();
-                Console.WriteLine("Среднее арифметическое:");
-                array[i].Average();
+                Console.WriteLine($"Среднее арифметическое: {array[i].Average()}");
+                if (array[i] is IOneDim oneDim)
+                {
+                    Console.WriteLine("Массив без дубликатов:");
+                    oneDim.Uniqal();
+                }
+                else if (array[i] is ITwoDim twoDim)
+                {
+                    Console.WriteLine("Массив змейкой:");
+                    twoDim.Snake();
+                }
+                else if (array[i] is IJagDim jagDim)
+                {
+                    Console.WriteLine("Массив с заменой четных значений:");
+                    jagDim.SwapOnInd();
+                }
+
+                Console.WriteLine();
             }
+
+            IPrinter days = new Week();
+            Console.WriteLine("Дни недели");
+            days.Print();
         }
     }
 }
